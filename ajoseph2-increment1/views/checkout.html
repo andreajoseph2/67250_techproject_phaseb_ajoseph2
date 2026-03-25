@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+</head>
+<body>
+    <h1>MonoMuse</h1>
+    <nav>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="checkout.html">Checkout</a>
+    </nav>
+    <div class="main">
+        <form action = "#">
+            <p>
+                <label for="name">Name: (required)</label><br>
+                <input type="text" id="name" name="name" required>
+            </p>
+            <p>
+                <label for="email">Email: (required)</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+            <p>
+                <label for ="ticket-type">Ticket Type: (required)</label><br>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="">Select a ticket type</option>
+                    <option value="adult">Adult - $18</option>
+                    <option value="student">Student - $10</option>
+                    <option value="member">Member - $15</option>
+                </select>
+            </p>
+            <p>
+                <label for="quantity">Ticket Quantity: (required)</label><br>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2026 MonoMuse. All rights reserved.</p>
+    </footer>
+</body>
+</html>
