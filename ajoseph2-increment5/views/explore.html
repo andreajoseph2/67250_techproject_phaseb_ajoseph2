@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="description" content="Explore MonoMuse museum">
+    <title>MonoMuse – Explore</title>
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Leaflet.js — open-source map library (https://leafletjs.com) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="buytickets.html">Tickets</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <h2>Mission Statement</h2>
+            <p id="missionShort">MonoMuse is dedicated to giving a single artist the space they deserve. Each season, we curate one focused exhibition — no clutter, no compromise. Just one vision, explored in depth.</p>
+            <p id="missionLong" style="display: none;">We believe that truly understanding an artist requires immersion, not a survey. By devoting our entire space to one voice at a time, MonoMuse creates an environment where visitors can move slowly, look closely, and leave with a genuine connection to the work. Our rotating model means every visit is a completely new experience.</p>
+            <button class="readMoreBtn" data-target="missionLong">Read More</button>
+            <button class="readLessBtn" data-target="missionLong" style="display: none;">Read Less</button>
+
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="slideshow">
+                    <div class="slide active">
+                        <img src="../static/museum-image2.jpg" alt="Visitors exploring an immersive installation at MonoMuse">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/museum-image1.jpg" alt="Sculpture gallery inside MonoMuse">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/museum-image.jpg" alt="Visitors experiencing interactive art at MonoMuse">
+                    </div>
+                </div>
+                <div class="slide-controls">
+                    <button class="slide-btn" id="slide-prev" aria-label="Previous slide">&#8592;</button>
+                    <div class="slide-dots">
+                        <button class="dot active" aria-label="Slide 1"></button>
+                        <button class="dot" aria-label="Slide 2"></button>
+                        <button class="dot" aria-label="Slide 3"></button>
+                    </div>
+                    <button class="slide-btn" id="slide-next" aria-label="Next slide">&#8594;</button>
+                </div>
+            </div>
+
+            <h2>Hours &amp; Admission</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Hours of Operation</h3>
+                    <ul>
+                        <li>Monday: Closed</li>
+                        <li>Tuesday – Friday: 10am – 6pm</li>
+                        <li>Saturday: 10am – 8pm</li>
+                        <li>Sunday: 12pm – 5pm</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Ticket Prices</h3>
+                    <ul>
+                        <li>Adult: $18</li>
+                        <li>Student: $10 (ID required)</li>
+                        <li>Member: $15 (ID required)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Membership &amp; Donations</h2>
+            <p>Support MonoMuse and enjoy exclusive benefits all year long.</p>
+            <div class="membership-cards">
+                <div class="membership-card">
+                    <h3>Friend</h3>
+                    <span class="price-tag">$50/yr</span>
+                    <ul>
+                        <li>Unlimited free admission</li>
+                        <li>10% museum shop discount</li>
+                        <li>Member newsletter</li>
+                    </ul>
+                    <a href="checkout.html" class="cta" style="font-size:0.85rem; padding:8px 16px;">Join</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Supporter</h3>
+                    <span class="price-tag">$120/yr</span>
+                    <ul>
+                        <li>All Friend benefits</li>
+                        <li>2 guest passes per year</li>
+                        <li>Private opening invitations</li>
+                    </ul>
+                    <a href="checkout.html" class="cta" style="font-size:0.85rem; padding:8px 16px;">Join</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Patron</h3>
+                    <span class="price-tag">$250/yr</span>
+                    <ul>
+                        <li>All Supporter benefits</li>
+                        <li>Curator-led tours</li>
+                        <li>Name in annual report</li>
+                    </ul>
+                    <a href="checkout.html" class="cta" style="font-size:0.85rem; padding:8px 16px;">Join</a>
+                </div>
+            </div>
+
+            <h2>Milestones</h2>
+            <ul>
+                <li>2016: MonoMuse opens its doors with its inaugural single-artist exhibition.</li>
+                <li>2018: MonoMuse receives a prestigious award for innovation in single-artist curation.</li>
+                <li>2023: MonoMuse expands its gallery space to accommodate larger immersive installations.</li>
+                <li>2026: MonoMuse presents <em>Crowns &amp; Crosses</em>, a landmark Basquiat retrospective.</li>
+            </ul>
+
+            <h2>Inside MonoMuse</h2>
+            <!-- YouTube embed — Jean-Michel Basquiat documentary -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/nztsMfNZhaI?si=6guKFb3k31gF_mot"
+                    title="Jean-Michel Basquiat documentary"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <a href="buytickets.html" class="cta">Buy Tickets</a>
+
+        </main>
+
+        <figure class="main_img">
+        </figure>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>

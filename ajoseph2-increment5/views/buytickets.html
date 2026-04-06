@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="description" content="Buy tickets to MonoMuse">
+    <title>MonoMuse – Buy Tickets</title>
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="buytickets.html">Tickets</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <h2>Buy Tickets</h2>
+            <p>Select a ticket type. On view through June 30, 2026.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adult</td>
+                        <td>General admission for ages 18+</td>
+                        <td>$18</td>
+                        <td><button class="buy-btn" data-type="Adult">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Student</td>
+                        <td>Valid student ID required</td>
+                        <td>$10</td>
+                        <td><button class="buy-btn" data-type="Student">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>MonoMuse member ID required</td>
+                        <td>$15</td>
+                        <td><button class="buy-btn" data-type="Member">Buy Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="purchase-form-container">
+                <h3>Complete Your Purchase</h3>
+                <p id="selected-ticket-label"></p>
+
+                <form id="ticket-purchase-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="bt-name">Name <span class="required">*</span></label>
+                        <input type="text" id="bt-name" name="bt-name">
+                        <span class="error-msg" id="bt-name-error">Please enter your name.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bt-email">Email <span class="required">*</span></label>
+                        <input type="email" id="bt-email" name="bt-email" placeholder="you@example.com">
+                        <span class="error-msg" id="bt-email-error">Please enter a valid email address.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bt-date">Visit Date <span class="required">*</span></label>
+                        <input type="date" id="bt-date" name="bt-date">
+                        <span class="error-msg" id="bt-date-error">Please select a visit date.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bt-qty">Number of Tickets (1–10) <span class="required">*</span></label>
+                        <input type="number" id="bt-qty" name="bt-qty" min="1" max="10" value="1">
+                        <span class="error-msg" id="bt-qty-error">Please enter a quantity between 1 and 10.</span>
+                    </div>
+
+                    <input type="hidden" id="bt-type" name="bt-type">
+
+                    <div class="price-display" id="bt-price-display">
+                        Total: <span id="bt-price-summary">$0</span>
+                    </div>
+
+                    <button type="submit">Confirm Order</button>
+                </form>
+            </div>
+        </main>
+
+        <figure class="main_img"></figure>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
