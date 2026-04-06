@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+    <script src="./static/script.js" defer></script>
+
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="views/explore.html">Explore</a></li>
+                <li><a href="views/exhibitions.html">Exhibitions</a></li>
+                <li><a href="views/buytickets.html">Tickets</a></li> 
+                <li><a href="views/checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        </header>
+
+
+        <main class="main">
+            <div id="greeting-container">
+                <h2 id="greeting"></h2>
+                
+                <p id="shortIntro">MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity...</p>
+                
+                <p id="longIntro" style="display: none;">Every exhibition uses technology to make art more accessible and engaging, offering ways to interact with the art world in new, unexpected ways. This season, we welcome the energy and cultural defiance of Jean-Michel Basquiat.</p>
+                
+                <button id="readMore">Read More</button>
+                <button id="readLess" style="display: none;">Read Less</button>
+                
+                <br><br>
+
+                <a href="views/buytickets.html" class="cta">Buy Tickets</a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum. All rights reserved.</p>
+        </footer>
+
+    </div> 
+</body>
+</html>

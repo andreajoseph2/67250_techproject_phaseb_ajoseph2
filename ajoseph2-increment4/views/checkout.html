@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="exhibitions.html">Exhibitions</a></li>
+                <li><a href="buytickets.html">Tickets</a></li> <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        </header>
+
+
+        <main class="main">
+            <h2>Checkout</h2>
+            <p>Complete your order below.</p>
+            <form action="#">
+                <label for="name">Name: (required)</label>
+                <input type="text" id="name" name="name" required>
+ 
+                <label for="email">Email: (required)</label>
+                <input type="email" id="email" name="email" required>
+ 
+                <label for="ticket-type">Ticket Type: (required)</label>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="">Select a ticket type</option>
+                    <option value="adult">Adult – $18</option>
+                    <option value="student">Student – $10</option>
+                    <option value="member">Member – $15</option>
+                </select>
+ 
+                <label for="quantity">Ticket Quantity: (required)</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+ 
+                <button type="submit">Place Order</button>
+            </form>
+        </main>
+ 
+        <figure class="main_img">
+        </figure>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum. All rights reserved.</p>
+        </footer>
+
+    </div> <script src="../static/script.js"></script>
+</body>
+</html>

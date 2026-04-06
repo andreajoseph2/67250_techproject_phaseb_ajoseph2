@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+    <script src="../static/script.js" defer></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="exhibitions.html">Exhibitions</a></li>
+                <li><a href="buytickets.html">Tickets</a></li> <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        </header>
+
+
+        <main class="main">
+            <h2>Current Exhibition</h2>
+            <h3>The World of Jean-Michel Basquiat</h3>
+            <p>Running through June 30, 2026</p>
+            <p>This exhibition brings together a curated selection of works spanning throughout Basquiat's career.</p>
+
+            <h3>Featured Works</h3>
+            <p id="worksShort">Highlights include studies of his iconic crown motif, anatomical drawings that blur the line between body and diagram, and his layered text-based compositions that read like visual poems.</p>
+            <p id="worksLong" style="display: none;">Interactive stations allow visitors to explore the recurring symbols Basquiat used throughout his career — the crossed-out words, the saints and skeletons, the references to jazz and African history. Each work rewards close looking, revealing new layers the longer you stand with it.</p>
+            <button class="readMoreBtn" data-target="worksLong">Read More</button>
+            <button class="readLessBtn" data-target="worksLong" style="display: none;">Read Less</button>
+
+            <h3>About the Artist</h3>
+            <p id="artistShort">Jean-Michel Basquiat (1960–1988) rose from the streets of New York City to become one of the most celebrated artists of the 20th century. Self-taught and fiercely original, his work challenged the art world's conventions.</p>
+            <p id="artistLong" style="display: none;">Drawing on influences from jazz, hip-hop, African history, and street culture, Basquiat's paintings pulse with urgency and intelligence. He became the first Black artist to achieve international superstar status in the contemporary art world, all before his death at age 27.</p>
+            <button class="readMoreBtn" data-target="artistLong">Read More</button>
+            <button class="readLessBtn" data-target="artistLong" style="display: none;">Read Less</button>
+
+             <br><br>
+
+            <a href="buytickets.html" class="cta">Buy Tickets</a>
+        </main>
+
+        <figure class="main_img">
+            </figure>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum. All rights reserved.</p>
+        </footer>
+
+    </div> 
+    <script src="../static/script.js"></script>
+</body>
+</html>
