@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="buytickets.html">Tickets</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main class="main">
+            <h2>Mission Statement</h2>
+            <p id="missionShort">MonoMuse is dedicated to giving a single artist the space they deserve. Each season, we curate one focused exhibition explored in depth.</p>
+            <p id="missionLong" style="display: none;">We believe that truly understanding an artist requires immersion. By devoting our entire space to one voice at a time, MonoMuse creates an environment where visitors can move slowly and look closely. Our model means every visit is a new experience.</p>
+            <button class="readMoreBtn" data-target="missionLong">Read More</button>
+            <button class="readLessBtn" data-target="missionLong" style="display: none;">Read Less</button>
+            <h2>Milestones</h2>
+            <ul>
+                <li>2016: MonoMuse opens its doors with its first single-artist exhibition.</li>
+                <li>2018: MonoMuse receives an award for innovation.</li>
+                <li>2023: MonoMuse expands its gallery space to accommodate larger immersive installations.</li>
+                <li>2026: MonoMuse presents a Basquiat retrospective.</li>
+            </ul>
+            <a href="buytickets.html" class="cta">Buy Tickets</a>
+        </main>
+
+        <figure class="main_img">
+             <img src="../static/museum-image.jpg" alt="One of our amazing exhibits at MonoMuse">
+        </figure>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

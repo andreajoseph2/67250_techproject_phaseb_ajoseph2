@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Buy Tickets - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="buytickets.html">Tickets</a></li> <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main class="main">
+            <h2>Purchase Tickets</h2>
+            <p>Select an option below to start your order.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adult</td>
+                        <td>General admission for ages 18+</td>
+                        <td>$18</td>
+                        <td><button class="buy-btn" data-type="Adult" data-price="$18">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Student</td>
+                        <td>Valid student ID required</td>
+                        <td>$10</td>
+                        <td><button class="buy-btn" data-type="Student" data-price="$10">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>MonoMuse member ID required</td>
+                        <td>$15</td>
+                        <td><button class="buy-btn" data-type="Member" data-price="$15">Buy Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="purchase-form-container">
+                <h3>Complete Your Purchase</h3>
+                <p id="selected-ticket-label" style="margin-bottom: 16px; color: #7c4dbd; font-weight: 600;"></p>
+                <form id="ticket-purchase-form">
+                    <label for="t-name">Name:</label>
+                    <input type="text" id="t-name" name="t-name" required>
+ 
+                    <label for="t-email">Email:</label>
+                    <input type="email" id="t-email" name="t-email" required>
+ 
+                    <label for="t-qty">Number of Tickets:</label>
+                    <input type="number" id="t-qty" name="t-qty" min="1" value="1">
+ 
+                    <input type="hidden" id="t-type" name="t-type">
+ 
+                    <button type="submit">Confirm Order</button>
+                </form>
+            </div>
+        </main>
+
+
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum.</p>
+        </footer>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
