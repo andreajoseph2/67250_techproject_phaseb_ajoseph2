@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MonoMuse order confirmation">
+    <title>MonoMuse – Order Confirmed</title>
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/final logo.png" alt="MonoMuse Museum Logo">
+            <nav class="nav_bar">
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="buytickets.html">Tickets</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="confirmation-box">
+                <div class="confirmation-icon">&#10003;</div>
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for your purchase. Your tickets to <em>Crowns &amp; Crosses: The World of Jean-Michel Basquiat</em> are confirmed.</p>
+
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Visit Date</span>
+                        <span class="detail-value" id="conf-date">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Ticket Type</span>
+                        <span class="detail-value" id="conf-type">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Quantity</span>
+                        <span class="detail-value" id="conf-qty">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value" id="conf-email">—</span>
+                    </div>
+                    <div class="detail-row total-row">
+                        <span class="detail-label">Total Paid</span>
+                        <span class="detail-value" id="conf-total">—</span>
+                    </div>
+                </div>
+
+                <p class="confirmation-note">A confirmation email has been sent to your inbox. Please bring this confirmation to the museum. We look forward to seeing you!</p>
+                <a href="../index.html" class="cta">Back to Home</a>
+            </div>
+        </main>
+
+        <figure class="main_img"></figure>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MonoMuse Museum. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
